@@ -27,7 +27,7 @@ SECRET_KEY = config(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG", default=True, cast=bool)
 
-ALLOWED_HOSTS = ["127.0.0.1", "your-domain.com"]
+ALLOWED_HOSTS = ["127.0.0.1", "your-domain.com", "localhost"]
 
 # change the default user models to our custom model
 AUTH_USER_MODEL = "accounts.User"
@@ -256,11 +256,11 @@ LECTURER_ID_PREFIX = config("LECTURER_ID_PREFIX", "lec")
 CACHES = {
     "default": {
         "BACKEND": "django.core.cache.backends.redis.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379",
+        "LOCATION": "redis://redis:6379",
     }
 }
 
 # celery setting.
-CELERY_BROKER_URL = "redis://localhost:6379/0"
+CELERY_BROKER_URL = "redis://redis:6379/0"
 CELERY_CACHE_BACKEND = "default"
 CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
