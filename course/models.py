@@ -20,7 +20,7 @@ YEARS = (
 )
 
 # LEVEL_COURSE = "Level course"
-BACHELOR_DEGREE = "Bachelor"
+BACHELOR_DEGREE = "Bachelors"
 MASTER_DEGREE = "Master"
 
 LEVEL = (
